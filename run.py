@@ -5,5 +5,22 @@
 # Importing the randint function from the random module
 from random import randint
 
+
 # Scores for both computer and player
 scores = {"computer": 0, "player": 0}
+
+
+class Board:
+    """
+    Main Board class. Sets board size, the number of ships,
+    the player's name and the board type (player board or computer)
+    Has methods for adding ships and guesses and printing the board
+    """
+    def __init__(self, size, num_ships, name, type1):
+        self.size = size
+        self.board = [["." for _ in range(size)] for _ in range(size)]
+        self.num_ships = num_ships
+        self.name = name
+        self.type = type1
+        self.guesses = []
+        self.ships = []
