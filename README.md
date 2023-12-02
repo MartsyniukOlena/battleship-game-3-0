@@ -8,3 +8,16 @@ The game is text-based and interactive, allowing players to engage in a strategi
 
 ![mockup](readme-media/mockup.png)
 
+## How to play
+
+The game begins by prompting the player to enter their name.
+
+Both the player and the computer have their boards with ships randomly placed. A player can see where their ships are placed.
+
+Players take turns guessing coordinates to attack their opponent's ships. After entering a row and a column numbers, the result will be displayed. If you hit a ship, it will be marked with 'X'; if you miss, it will be marked with 'M'.
+
+The game continues until one player sinks all the opponent's ships or until there's a tie if both reach a score of 3.
+
+After the game ends, the final results are displayed, and a winner is declared. 
+
+Players can play the game again by entering 'Y' for yes or 'N' for no.
