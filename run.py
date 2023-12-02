@@ -133,6 +133,13 @@ def play_game(computer_board, player_board):
             print(f"Thank you for playing, {player_board.name}.")
             break
 
+        # Ensures that the computer generates random coordinates and avoids repeating guesses
+        while True:
+            x, y = random_point(computer_board.size), random_point(computer_board.size)
+            if (x, y) not in computer_guesses:
+                computer_guesses.add((x, y))
+                break
+
 
 
 
