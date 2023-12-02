@@ -31,4 +31,17 @@ class Board:
         """
         print("  " + "  ".join(str(i) for i in range(1, self.size + 1)))
         for i, row in enumerate(self.board, start=1):
-            print(i, "  ".join(row))    
+            print(i, "  ".join(row))
+
+    def add_guesses(self, x, y):
+        """
+        Add player's guesses to the board.
+        """
+        self.guesses.append((x, y))
+        self.board[x][y] = "M"
+
+        if (x, y) in self.ships:
+            self.board[x][y] = "X"
+            return "Hit"
+        else:
+            return "Miss"
