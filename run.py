@@ -84,7 +84,8 @@ def populate_board(board):
 
 def make_guess(board):
     """
-    Allows the player to make a guess on the board by entering row and column numbers.
+    Allows the player to make a guess on the board
+    by entering row and column numbers.
     Updates the board based on the player's guess.
     """
 
@@ -96,7 +97,7 @@ def make_guess(board):
             if not valid_coordinates(x, y, board.size):
                 print("Input is out of range. Enter a number between 1 and 5.")
             elif (x, y) in board.guesses:
-                print("You have already made a move in this position. Try again.")
+                print("You have made a move in this position. Try again.")
             else:
                 # Add the guess to the board and check the result
                 result = board.add_guesses(x, y)
@@ -112,7 +113,8 @@ def make_guess(board):
 
 def play_game(computer_board, player_board):
     """
-    Simulates the gameplay between a computer and a player using two game boards.
+    Simulates the gameplay between a computer and a player
+    using two game boards.
     Tracks scores and prints the results until the game ends.
     """
     # Set to store computer's guessed coordinates
@@ -124,16 +126,18 @@ def play_game(computer_board, player_board):
         player_board.print()
         print("Computer's board")
         computer_board.print()
-        make_guess(computer_board) # Player makes a guess on computer's board
+        make_guess(computer_board)  # Player makes a guess on computer's board
 
-        # Check if all ship coordinates are guessed by the player on the computer's board
+        # Check if all ship coordinates are guessed
+        # by the player on the computer's board
         if all(coord in computer_board.guesses for coord in computer_board.ships):
             print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
             print(f"GAME OVER. {player_board.name} is the WINNER")
             print(f"Thank you for playing, {player_board.name}.")
             break
 
-        # Ensures that the computer generates random coordinates and avoids repeating guesses
+        # Ensures that the computer generates random coordinates
+        # and avoids repeating guesses
         while True:
             x, y = random_point(computer_board.size), random_point(computer_board.size)
             if (x, y) not in computer_guesses:
@@ -152,7 +156,8 @@ def play_game(computer_board, player_board):
             print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
             print("=" * 70)
 
-        # Check if all ship coordinates are guessed by the computer on the player's board
+        # Check if all ship coordinates are guessed
+        # by the computer on the player's board
         if all(coord in player_board.guesses for coord in player_board.ships):
             print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
             print("GAME OVER. Computer is the WINNER")
@@ -163,6 +168,7 @@ def play_game(computer_board, player_board):
             print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
             print("GAME OVER. It's a tie!")
             break
+
 
 def play_again():
     """
@@ -216,8 +222,11 @@ def new_game():
     input("Press ENTER to start the game...\n")
     print("=" * 70)
 
-    # Start the game by calling the play_game function with the initialized boards
+    # Start the game by calling the play_game function
+    # with the initialized boards
     play_game(computer_board, player_board)
-    play_again() # Ask if the players want to play again
+    play_again()  # Ask if the players want to play again
 
-new_game()  # Start the game when the script is run
+
+# Start the game when the script is run
+new_game()
