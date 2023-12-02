@@ -70,7 +70,9 @@ def valid_coordinates(x, y, size):
 
 
 def populate_board(board):
-    """Populate the board with ships."""
+    """
+    Populate the board with ships.
+    """
     for _ in range(board.num_ships):
         while True:
             x = random_point(board.size - 1)
@@ -78,3 +80,31 @@ def populate_board(board):
             if (x, y) not in board.ships:
                 board.add_ship(x, y)
                 break
+
+
+def make_guess(board):
+     """
+    Allows the player to make a guess on the board by entering row and column numbers.
+    Updates the board based on the player's guess.
+    """
+
+    while True:
+        try:
+            x = int(input("Enter a number for row (1-5)")) - 1
+            y = int(input("Enter a number for column (1-5)")) - 1
+            # Check if the entered coordinates are valid
+            if not valid_coordinates(x, y, board.size):
+                print("Input is out of range. Enter a number between 1 and 5.")
+            elif (x, y) in board.guesses:
+                print("You have already made a move in this position. Try again.")
+            else:
+                # Add the guess to the board and check the result
+                result = board.add_guesses(x, y)
+                if result == "Hit":
+                    print("Boom! You hit! A ship has exploded!")
+                    scores["player"] += 1
+                else:
+                    print("You Missed!")
+                break
+        except ValueError:
+            print("Only enter numbers!")
