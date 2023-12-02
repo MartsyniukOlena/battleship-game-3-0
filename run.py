@@ -90,8 +90,8 @@ def make_guess(board):
 
     while True:
         try:
-            x = int(input("Enter a number for row (1-5)")) - 1
-            y = int(input("Enter a number for column (1-5)")) - 1
+            x = int(input("Enter a number for row (1-5)\n")) - 1
+            y = int(input("Enter a number for column (1-5)\n")) - 1
             # Check if the entered coordinates are valid
             if not valid_coordinates(x, y, board.size):
                 print("Input is out of range. Enter a number between 1 and 5.")
@@ -169,7 +169,7 @@ def play_again():
     Ask user if they want to play again.
     """
     while True:
-        play = input("Do you want to play again? (Y/N): ").lower()
+        play = input("Do you want to play again? (Y/N): \n").lower()
         if play == "y":
             return True
         elif play == "n":
@@ -197,7 +197,7 @@ def new_game():
 
     while True:
         print("=" * 70)
-        player_name = input("Please enter your name: ")
+        player_name = input("Please enter your name: \n")
         if player_name:
             break
         else:
@@ -211,7 +211,7 @@ def new_game():
     populate_board(computer_board)
 
     print("=" * 70)
-    input("Press ENTER to start the game...")
+    input("Press ENTER to start the game...\n")
     print("=" * 70)
 
     # Start the game by calling the play_game function with the initialized boards
