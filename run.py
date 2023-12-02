@@ -219,6 +219,7 @@ def new_game():
     populate_board(computer_board)
 
     print("=" * 70)
+    print(f"Greetings, {player_name}! Let's start the Battleship Game!")
     input("Press ENTER to start the game...\n")
     print("=" * 70)
 
