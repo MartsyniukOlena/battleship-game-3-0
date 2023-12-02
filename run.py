@@ -173,7 +173,9 @@ def play_again():
         if play == "y":
             return True
         elif play == "n":
-            return False
+            print("Thank you for playing Battleships! Goodbye!")
+            play = False  # Set the flag to False indicating not to play again
+            break  # Break out of the loop
         else:
             print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
