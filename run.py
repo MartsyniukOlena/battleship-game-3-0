@@ -140,6 +140,18 @@ def play_game(computer_board, player_board):
                 computer_guesses.add((x, y))
                 break
 
+        # Computer makes a guess on player's board
+        result = player_board.add_guesses(x, y)
+        if result == "Hit":
+            print(f"Computer Hit at ({x+1}, {y+1})!")
+            scores["computer"] += 1
+            print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
+            print("=" * 70)
+        else:
+            print(f"Computer Missed at ({x+1}, {y+1})!")
+            print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
+            print("=" * 70)
+
 
 
 
