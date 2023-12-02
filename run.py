@@ -53,3 +53,10 @@ class Board:
         self.ships.append((x, y))
         if self.type == "player":
             self.board[x][y] = "S"
+
+
+def random_point(size):
+    """
+    Generate random coordinate within board size.
+    """
+    return randint(0, size - 1)
