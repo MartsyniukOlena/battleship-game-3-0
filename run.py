@@ -60,3 +60,10 @@ def random_point(size):
     Generate random coordinate within board size.
     """
     return randint(0, size - 1)
+
+
+def valid_coordinates(x, y, size):
+    """
+    Check if coordinates are within the board.
+    """
+    return 0 <= x < size and 0 <= y < size
