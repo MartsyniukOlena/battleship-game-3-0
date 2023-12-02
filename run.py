@@ -203,6 +203,19 @@ def new_game():
         else:
             print("Please enter a valid name!")
 
-    play_game(computer_board, player_board)
+    # Create game boards for the computer and player
+    computer_board = Board(size, num_ships, "Computer", "computer")
+    player_board = Board(size, num_ships, player_name, "player")
+    # Populate boards with ships
+    populate_board(player_board)
+    populate_board(computer_board)
 
-new_game()
+    print("=" * 70)
+    input("Press ENTER to start the game...")
+    print("=" * 70)
+
+    # Start the game by calling the play_game function with the initialized boards
+    play_game(computer_board, player_board)
+    play_again() # Ask if the players want to play again
+
+new_game()  # Start the game when the script is run
