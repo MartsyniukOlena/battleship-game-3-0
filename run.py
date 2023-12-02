@@ -118,4 +118,26 @@ def play_game(computer_board, player_board):
     # Set to store computer's guessed coordinates
     computer_guesses = set()
 
+    # Loop to continue the game until someone wins or it's a tie
+    while True:
+        print("Your board")
+        player_board.print()
+        print("Computer's board")
+        computer_board.print()
+        make_guess(computer_board) # Player makes a guess on computer's board
+
+        # Check if all ship coordinates are guessed by the player on the computer's board
+        if all(coord in computer_board.guesses for coord in computer_board.ships):
+            print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
+            print(f"GAME OVER. {player_board.name} is the WINNER")
+            print(f"Thank you for playing, {player_board.name}.")
+            break
+
+
+
+
+
+
+
+
 play_game(computer_board, player_board)
