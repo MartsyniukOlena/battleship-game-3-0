@@ -35,5 +35,8 @@ When a user starts a game, the first thing they see is a welcome message, a shor
 
 The user can start a game after entering the valid name. The name here is validated. If the input is empty, the user is asked to enter the valid name.
 
-![valid name](readme-media/valid-name.png)
+![enter-valid-name](readme-media/enter-valid-name.png)
+
+After entering the valid name, a user presses enter key the game begins.
+![valid-name](readme-media/valid-name.png)
 ___
