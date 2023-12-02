@@ -83,7 +83,7 @@ def populate_board(board):
 
 
 def make_guess(board):
-     """
+    """
     Allows the player to make a guess on the board by entering row and column numbers.
     Updates the board based on the player's guess.
     """
@@ -108,3 +108,14 @@ def make_guess(board):
                 break
         except ValueError:
             print("Only enter numbers!")
+
+
+def play_game(computer_board, player_board):
+    """
+    Simulates the gameplay between a computer and a player using two game boards.
+    Tracks scores and prints the results until the game ends.
+    """
+    # Set to store computer's guessed coordinates
+    computer_guesses = set()
+
+play_game(computer_board, player_board)
