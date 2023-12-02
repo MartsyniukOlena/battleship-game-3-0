@@ -67,3 +67,14 @@ def valid_coordinates(x, y, size):
     Check if coordinates are within the board.
     """
     return 0 <= x < size and 0 <= y < size
+
+
+def populate_board(board):
+    """Populate the board with ships."""
+    for _ in range(board.num_ships):
+        while True:
+            x = random_point(board.size - 1)
+            y = random_point(board.size - 1)
+            if (x, y) not in board.ships:
+                board.add_ship(x, y)
+                break
