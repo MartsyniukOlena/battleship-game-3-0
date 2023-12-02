@@ -21,3 +21,19 @@ The game continues until one player sinks all the opponent's ships or until ther
 After the game ends, the final results are displayed, and a winner is declared. 
 
 Players can play the game again by entering 'Y' for yes or 'N' for no.
+
+## Features
+
+The Battleship Game 3.0 offers several key features for its users.
+
+### Existing Features
+
+__Welcome Message:__
+
+When a user starts a game, the first thing they see is a welcome message, a short game description and the prompt to enter player's name. This area serves as an entry point, welcoming users to the game and offering them a clear starting point, enhancing user experience. 
+![welcome-message](readme-media/welcome.png)
+
+The user can start a game after entering the valid name. The name here is validated. If the input is empty, the user is asked to enter the valid name.
+
+![valid name](readme-media/valid-name.png)
+___
