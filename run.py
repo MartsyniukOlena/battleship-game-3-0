@@ -164,7 +164,18 @@ def play_game(computer_board, player_board):
             print("GAME OVER. It's a tie!")
             break
 
-
+def play_again():
+    """
+    Ask user if they want to play again.
+    """
+    while True:
+        play = input("Do you want to play again? (Y/N): ").lower()
+        if play == "y":
+            return True
+        elif play == "n":
+            return False
+        else:
+            print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
 
 
 
