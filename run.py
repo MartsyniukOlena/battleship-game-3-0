@@ -24,3 +24,11 @@ class Board:
         self.type = type1
         self.guesses = []
         self.ships = []
+
+    def print(self):
+        """
+        Print the board with ships and guesses.
+        """
+        print("  " + "  ".join(str(i) for i in range(1, self.size + 1)))
+        for i, row in enumerate(self.board, start=1):
+            print(i, "  ".join(row))    
