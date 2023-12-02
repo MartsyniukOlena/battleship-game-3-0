@@ -158,6 +158,12 @@ def play_game(computer_board, player_board):
             print("GAME OVER. Computer is the WINNER")
             break
 
+        # Check for a tie if both player and computer have a score of 3
+        if scores['player'] == 3 and scores['computer'] == 3:
+            print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
+            print("GAME OVER. It's a tie!")
+            break
+
 
 
 
