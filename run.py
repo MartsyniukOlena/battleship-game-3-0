@@ -152,6 +152,12 @@ def play_game(computer_board, player_board):
             print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
             print("=" * 70)
 
+        # Check if all ship coordinates are guessed by the computer on the player's board
+        if all(coord in player_board.guesses for coord in player_board.ships):
+            print(f"Your score: {scores['player']}, Computer's score: {scores['computer']}")
+            print("GAME OVER. Computer is the WINNER")
+            break
+
 
 
 
