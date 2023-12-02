@@ -175,11 +175,34 @@ def play_again():
         elif play == "n":
             return False
         else:
-            print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
+            print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
 
+def new_game():
+    """
+    Initialize and start a new game of Battleships.
+    Initializes the game settings, boards, and starts the gameplay loop.
+    """
+    size = 5
+    num_ships = 3
+    scores["computer"] = 0
+    scores["player"] = 0
+    print("=" * 70)
+    print("Welcome to Battleships Game!")
 
+    print("Sink all of the ships before the oponent sinks them.")
+    print("Missed ships are marked with 'M', hit ships are marked with'X")
+    print("=" * 70)
+    print(f"Board Size: {size}. Number of ships: {num_ships}")
 
+    while True:
+        print("=" * 70)
+        player_name = input("Please enter your name: ")
+        if player_name:
+            break
+        else:
+            print("Please enter a valid name!")
 
+    play_game(computer_board, player_board)
 
-play_game(computer_board, player_board)
+new_game()
