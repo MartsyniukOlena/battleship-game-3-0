@@ -45,3 +45,11 @@ class Board:
             return "Hit"
         else:
             return "Miss"
+
+    def add_ship(self, x, y):
+        """
+        Add ships to the board.
+        """
+        self.ships.append((x, y))
+        if self.type == "player":
+            self.board[x][y] = "S"
