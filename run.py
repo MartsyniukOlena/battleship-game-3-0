@@ -4,3 +4,6 @@
 
 # Importing the randint function from the random module
 from random import randint
+
+# Scores for both computer and player
+scores = {"computer": 0, "player": 0}
