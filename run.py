@@ -150,6 +150,9 @@ def play_game(comp_board, player_board):
         if result == "Hit":
             print(f"Computer Hit at ({x+1}, {y+1})!")
             scores["computer"] += 1
+            print(f"Your score: {scores['player']}")
+            print(f"Computer's score: {scores['computer']}")
+            print("=" * 70)
         else:
             print(f"Computer Missed at ({x+1}, {y+1})!")
             print(f"Your score: {scores['player']}")
