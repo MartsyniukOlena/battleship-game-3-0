@@ -86,5 +86,47 @@ When a user chooses 'N', the loop breaks.
 ## Future Features
 
 - to play with a real player.
-- players  place ships on the grid.
+- players place ships on the grid.
 - the fleet includes 5 ships of different sizes: aircraft Carrier (5 squares), battleship (4 squares), cruiser (3 squares), submarine (3 squares), destroyer (2 squares).
+
+## Data Model
+
+The data model in this Battleship game is implemented using a class-based structure. Here's a breakdown of the data model:
+
+1. Board Class (Board):
+  - Attributes:
+    - size: the size of the game board.
+    - board: the game board grid.
+    - num_ships: number of ships to be placed on the board.
+    - name: name of the player.
+    - type: player's or the computer's board.
+    - guess: stores the guessed coordinates made by the player.
+    - ships: contains the coordinates of ships placed on the board.
+
+  - Methods:
+    - print():
+    - add_guesses(x, y): adds player's or computer's guesses to the board.
+    - add_ship(x, y): adds ships to the board.
+
+2. Functions:
+    - random_point(size): random coordinates.
+    - valid_coordinates(x, y, size): checks if coordinates are valid.
+    - populate_board(board): Populates the board with ships.
+    - make_guess(board): Allows the player to make guesses on the board and updates the board based on the guess.
+    - play_game(comp_board, player_board): Simulates the gameplay between the computer and player using the two game boards.
+    - play_again(): Asks the user if they want to play another round.
+
+3. Initialization and Execution:
+    - new_game(): Initializes and starts a new game 
+
+## Testing
+
+I manually tested the following:
+
+- Passed the code through the CI Python Linter and confirmed there were no problems.
+- Gave invalid inputs for the player's name. 
+- Gave invalid inputs for the row and column coordinates, such as a letter when the number is expected, numbers out of range and repeated coordinates.
+- Checked if guesses were correctly marked on the boards. 
+- Checked if the score number is increasing after the hit.
+- Checked if the winner is declared correctly.
+- Checked if 'yes', 'no' and invalid input work correctly after the game is over. 
