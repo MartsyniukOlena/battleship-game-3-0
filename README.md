@@ -130,3 +130,31 @@ I manually tested the following:
 - Checked if the score number is increasing after the hit.
 - Checked if the winner is declared correctly.
 - Checked if 'yes', 'no' and invalid input work correctly after the game is over. 
+
+### Bugs
+
+__Solved Bugs__
+- The computer was choosing repeated coordinates. I added a set computer_guess to store the computer's guesses.
+- 'Yes' for the input 'Do you want to play the game again?' didn't work. I called the function new_game.
+
+__Remaining Bugs__
+No bugs remaining.
+
+__Validator Testing__
+No errors were returned from PEP8 Python Validator.
+
+## Deployment
+This project was deployed using Code Institute's mock terminal for Heroku.
+    Steps for deployment:
+    - Create a new Heroku app. --> Assign app name, choose region.
+    - Go to settings. --> Create Config Vars 
+    - Set the buildpack to Python and NodeJS in this order
+    - Go to Deploy. --> Choose GitHub as deploying method 
+    - Connect your repository
+    - Deploy Branch 
+
+## Credits
+Code Institute for the deployment terminal.
+Ultimate Battleship by Matt Rudge as a refence material to create class, functions.
+To check grammar and edit text, I used [Grammarly](https://app.grammarly.com/).
+
