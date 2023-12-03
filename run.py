@@ -150,9 +150,6 @@ def play_game(comp_board, player_board):
         if result == "Hit":
             print(f"Computer Hit at ({x+1}, {y+1})!")
             scores["computer"] += 1
-            print(f"Your score: {scores['player']}")
-            print(f"Computer's score: {scores['computer']}")
-            print("=" * 70)
         else:
             print(f"Computer Missed at ({x+1}, {y+1})!")
             print(f"Your score: {scores['player']}")
@@ -165,6 +162,7 @@ def play_game(comp_board, player_board):
             print(f"Your score: {scores['player']}")
             print(f"Computer's score: {scores['computer']}")
             print("GAME OVER. Computer is the WINNER")
+            print(f"Thank you for playing, {player_board.name}.")
             break
 
         # Check for a tie if both player and computer have a score of 3
@@ -186,7 +184,6 @@ def play_again():
             break
         elif play == "n":
             print("Thank you for playing Battleships! Goodbye!")
-            play = False  # Set the flag to False indicating not to play again
             break  # Break out of the loop
         else:
             print("Invalid input. Please enter 'y' for yes or 'n' for no.")
