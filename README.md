@@ -83,5 +83,8 @@ If you choose to play again, the game will reset with new ship placements and sc
 When a user chooses 'N', the loop breaks.
 ![play-again](readme-media/play-again.png)
 
+## Future Features
 
-
+- to play with a real player.
+- players  place ships on the grid.
+- the fleet includes 5 ships of different sizes: aircraft Carrier (5 squares), battleship (4 squares), cruiser (3 squares), submarine (3 squares), destroyer (2 squares).

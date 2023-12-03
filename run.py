@@ -175,7 +175,7 @@ def play_again():
     Ask user if they want to play again.
     """
     while True:
-        play = input("Do you want to play again? (Y/N): \n").lower()
+        play = input("Do you want to play again? (y/n): \n").lower()
         if play == "y":
             return True
         elif play == "n":
