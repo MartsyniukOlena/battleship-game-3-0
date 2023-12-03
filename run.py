@@ -182,7 +182,8 @@ def play_again():
     while True:
         play = input("Do you want to play again? (y/n): \n").lower()
         if play == "y":
-            return True
+            new_game()
+            break
         elif play == "n":
             print("Thank you for playing Battleships! Goodbye!")
             play = False  # Set the flag to False indicating not to play again
@@ -204,7 +205,7 @@ def new_game():
     print("Welcome to Battleships Game!")
 
     print("Sink all of the ships before the oponent sinks them.")
-    print("Missed ships are marked with 'M', hit ships are marked with'X'")
+    print("Missed ships are marked with 'M', hit ships are marked with'X")
     print("=" * 70)
     print(f"Board Size: {size}. Number of ships: {num_ships}")
 
